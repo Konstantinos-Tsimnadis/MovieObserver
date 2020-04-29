@@ -1,0 +1,14 @@
+
+csquid:S1192"GDefine a constant instead of duplicating this literal "movie" 13 times.(„êÎøÿÿÿÿ
+squid:S1192'"†Define a constant instead of duplicating this literal "Argument \"movie\" is marked as non-null but was passed a null value." 3 times.(é¨üÿ
+zsquid:S1488w"^Immediately return this expression instead of assigning it to the temporary variable "result".(Ì¶ÿÿÿÿÿ
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ùÀÑüÿÿÿÿ
+isquid:S001179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÍæ®
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢‡£şÿÿÿÿ
+zsquid:UselessImportCheck	"QRemove this unnecessary import: java.lang classes are always implicitly imported.(”ñ¯íùÿÿÿÿ
+zsquid:UselessImportCheck
+"QRemove this unnecessary import: java.lang classes are always implicitly imported.(Ãş”«ıÿÿÿÿ
+usquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ú®Ú±
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ôİÕıÿÿÿÿ
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(¤î˜Óüÿÿÿÿ
+]squid:S1126S"AReplace this if-then-else statement by a single return statement.(¡„ëñıÿÿÿÿ

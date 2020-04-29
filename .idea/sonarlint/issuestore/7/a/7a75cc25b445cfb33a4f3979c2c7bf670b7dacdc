@@ -1,0 +1,10 @@
+
+]squid:S1192'"FDefine a constant instead of duplicating this literal "movie" 9 times.(ú”óí
+isquid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÍæ®
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÉÐ‘Š
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(”ñ¯íùÿÿÿÿ
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(Ãþ”«ýÿÿÿÿ
+usquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ú®Ú±
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ôÝžÕýÿÿÿÿ
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(¤î˜Óüÿÿÿÿ
+Xsquid:S1126_"AReplace this if-then-else statement by a single return statement.(ƒÒ‰¼

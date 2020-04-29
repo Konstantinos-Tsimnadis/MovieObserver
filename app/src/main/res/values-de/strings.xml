@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Movie Observer</string>
+
+    <string-array name="starting_content">
+        <item>Demnächst</item>
+        <item>Jetzt abspielen</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>Englisch</item>
+        <item>Deutsch</item>
+    </string-array>
+
+    <!--  Bottom navigation  -->
+    <string name="navigation_movies">Filme</string>
+    <string name="navigation_settings">Einstellungen</string>
+    <string name="navigation_favorites">Lieblings</string>
+
+    <!--  Toolbar Titles  -->
+    <string name="toolbar_browse_movies">Filme durchsuchen</string>
+    <string name="toolbar_favorites">Lieblings</string>
+    <string name="toolbar_settings">Einstellungen</string>
+    <string name="toolbar_Details">Einzelheiten</string>
+
+    <!--  Featured Screen  -->
+    <string name="featured_no_internet">Internetverbindung für den ersten Start erforderlich.</string>
+    <string name="featured_content_upcoming">Demnächst</string>
+    <string name="featured_content_now_playing">Jetzt abspielen</string>
+
+    <!--  Settings Screen  -->
+    <string name="settings_general_settings">Allgemeine Einstellungen</string>
+    <string name="settings_enable_dark_mode">Dark mode aktivieren</string>
+    <string name="settings_starting_content">Start-Inhalt</string>
+    <string name="settings_content_settings">Inhaltseinstellungen</string>
+    <string name="settings_include_dult_movies">Erwachsene Filme enthalten</string>
+    <string name="settings_language">Sprache</string>
+
+    <!--  Detail Screen  -->
+    <string name="share_movie">Film teilen</string>
+    <string name="detail_share_text">Zieh dir das mal rein!</string>
+    <string name="details_title">Titel:</string>
+    <string name="details_rating">Bewertung:</string>
+    <string name="details_release_date">Erscheinungsdatum:</string>
+    <string name="details_language">Sprache:</string>
+    <string name="details_description">Beschreibung:</string>
+
+    <!--  Favorites Screen  -->
+    <string name="favorites_empty_list">Es gibt noch keinen Lieblingsfilm. Versuchen Sie jetzt, einen Film hinzuzufügen, indem Sie das Herz-Symbol drücken!</string>
+
+    <!--  Other  -->
+    <string name="snackbar_movie_removed">Film aus den Lieblings entfernt</string>
+    <string name="snackbar_movie_added">Film zu den Lieblings hinzugefügt</string>
+    <string name="snackbar_undo">Rückgängig machen</string>
+</resources>

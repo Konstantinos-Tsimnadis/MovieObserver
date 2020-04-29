@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kTs.movieobserver.ui.settingsScreen.SettingsViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background"
+        android:orientation="vertical"
+        tools:context=".ui.settingsScreen.SettingsFragment">
+
+        <TextView
+            android:id="@+id/settings_general_textview"
+            style="@style/SubTitle.Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/container_card_margin"
+            android:text="@string/settings_general_settings" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/settings_dark_mode_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/settings_dark_mode_textview"
+                        style="@style/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/settings_dark_mode_switch"
+                        android:ellipsize="end"
+                        android:text="@string/settings_enable_dark_mode"
+                        android:textSize="18sp" />
+
+                    <Switch
+                        android:id="@+id/settings_dark_mode_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:checked="@{viewModel.darkModeSetting}"
+                        android:onCheckedChanged="@{(button, bool) -> viewModel.setDarkModeSettingPreference(bool)}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settings_presenter_content_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/settings_presenter_content_textview"
+                        style="@style/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/settings_presenter_content_switch"
+                        android:ellipsize="end"
+                        android:text="@string/settings_starting_content"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/settings_presenter_content_switch"
+                        onSelected="@{(value) -> viewModel.setStartingContentSettingPreference(value.toString)}"
+                        setEntries="@{viewModel.startingContentTypeList}"
+                        setValue="@{viewModel.startingContentType}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/settings_content_textview"
+            style="@style/SubTitle.Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_content_settings" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/settings_adult_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/settings_adult_textview"
+                        style="@style/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/settings_adult_switch"
+                        android:ellipsize="end"
+                        android:text="@string/settings_include_dult_movies"
+                        android:textSize="18sp" />
+
+                    <Switch
+                        android:id="@+id/settings_adult_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:checked="@{viewModel.adultSetting}"
+                        android:onCheckedChanged="@{(button, bool) -> viewModel.setAdultSettingPreference(bool)}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settings_language_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/settings_language_textview"
+                        style="@style/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/settings_language_spinner"
+                        android:ellipsize="end"
+                        android:text="@string/settings_language"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/settings_language_spinner"
+                        onSelected="@{(value) -> viewModel.setLanguageSettingPreference(value.toString)}"
+                        setEntries="@{viewModel.languageList}"
+                        setValue="@{viewModel.languageType}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

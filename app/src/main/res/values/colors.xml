@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fdd835</color>
+    <color name="colorPrimaryDark">#c6a700</color>
+    <color name="colorPrimaryLight">#ffff6b</color>
+
+    <color name="colorSecondary">#212121</color>
+    <color name="colorSecondaryLight">#484848</color>
+    <color name="colorSecondaryDark">#000000</color>
+
+    <color name="colorAccent">@color/colorSecondary</color>
+
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorTextSecondary">#ffffff</color>
+
+    <color name="dark_background">#E1E2E1</color>
+
+    <color name="heart_color_active">#BF360D</color>
+    <color name="heart_color_inactive">#fbe9e7</color>
+
+    <color name="snackbar_action_text_color">@color/colorPrimaryLight</color>
+
+</resources>

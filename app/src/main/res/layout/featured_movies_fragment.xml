@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.kTs.movieobserver.ui.featuredMoviesScreen.FeaturedMoviesViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background"
+        tools:context=".ui.featuredMoviesScreen.FeaturedMoviesFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/presenter_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/featured_list_item" />
+
+        <LinearLayout
+            android:id="@+id/no_internet_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                imageStatus="@{viewModel.networkStatus}"
+                movieList="@{viewModel.presentedMovies}"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                style="@style/Description"
+                android:layout_width="@dimen/container_info_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/featured_no_internet"
+                android:visibility="@{viewModel.firstLaunch?View.VISIBLE:View.GONE}"
+                app:firstLaunch="@{viewModel.firstLaunch}"
+                app:networkStatus="@{viewModel.connectionStateLiveData}" />
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
